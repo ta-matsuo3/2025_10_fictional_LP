@@ -3,7 +3,7 @@
 body {
     font-family: $jpGameFont;
     background-color: #D9D9D9;
-    overflow-x: hidden;
+
 
 
     p {
@@ -18,6 +18,12 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+.backgroundSvg {
+    width: 100%;
+}
+
+
 
 
 #firstView {
@@ -105,12 +111,7 @@ img {
                 }
             }
         }
-
-
     }
-
-
-
 }
 
 .drawerMenu.active {
@@ -200,11 +201,14 @@ span {
     height: 850px;
     position: relative;
 
+
+
     svg {
         position: absolute;
-        top: 48%;
-        left: 50%;
-        transform: translate(-60%, -50%)
+        // top: 48%;
+        // left: 50%;
+        // transform: translate(-60%, -50%);
+
     }
 
     #descWrap {
