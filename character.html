@@ -7,23 +7,23 @@
     <meta name="description" content="架空のゲームのLPです">
     <title>Character</title>
     <meta name="robots" content="noindex,nofollow">
+
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+        rel="stylesheet">
+
+    <!-- 読み込み -->
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/drawerButton.js" async></script>
     <script type="module" src="js/script.js"></script>
 </head>
 
 <body>
-    <header>
-        <div id="headerWrap">
-            <div id="menuButton">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <img src="" alt="" id="coumpanyLogo">
-            <Button class="btn" id="purchaseButton"></Button>
-        </div>
-
-    </header>
+    <!-- javascriptで読み込み（共通化処理） -->
+    <div id="header"></div>
 
     <main>
         <div id="charaVisual">
@@ -43,21 +43,8 @@
         </div>
     </main>
 
-    <footer>
-        <div id="iconWrap">
-            <img src="" alt="" class="CorporateLogo">
-            <img src="" alt="" class="CorporateLogo">
-            <img src="" alt="" class="CorporateLogo">
-            <img src="" alt="" class="CorporateLogo">
-            <img src="" alt="" class="CorporateLogo">
-        </div>
-
-        <div id="snsWrap">
-            <img src="" alt="" class="snsIcon">
-            <img src="" alt="" class="snsIcon">
-        </div>
-        <div id="copyright"><small>&copy; 2025 matsuo takuma</small></div>
-    </footer>
+    <!-- フッターはjavascriptで読み込み -->
+    <div id="footer"></div>
 
 
 </body>

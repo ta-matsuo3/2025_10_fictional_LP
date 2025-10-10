@@ -1,125 +1,232 @@
-    // ドロワーメニュー　スタッキングコンテキスト対策でヘッダーの外に移動
-    .drawerMenu {
-        width: 100%;
-        height: 100dvh;
-        background-color: black;
+@use '../base/variables' as *;
+
+body {
+    font-family: $jpGameFont;
+    background-color: #D9D9D9;
+    overflow-x: hidden;
+
+
+    p {
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+}
+
+img {
+
+    max-width: 100%;
+    height: auto;
+}
+
+
+#firstView {
+    width: 100%;
+    aspect-ratio: 9/16;
+    background-image: url(../images/firstview/mainvisual.png);
+    background-size: cover;
+    background-position: 0 100%;
+    position: relative;
+
+
+    // #titleLogo {
+    //     position: absolute;
+    //     text-align: center;
+    //     right: 0;
+    //     bottom: 100px;
+    //     left: 0;
+    //     margin: auto;
+    // }
+
+    // #catchcopy {
+    //     margin-inline: auto;
+    //     font-family: $jpGameFont;
+    //     font-size: 20px;
+    //     position: absolute;
+    //     right: 0;
+    //     bottom: 100px;
+    //     left: 0;
+
+    //     text-align: center;
+    // }
+
+}
+
+
+
+
+.drawerMenu {
+    width: 100%;
+    height: 100dvh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    opacity: 1;
+
+    right: -100%;
+
+    transition: 0.3s all ease-out;
+
+    .active {
+        right: 0;
+        left: 0;
+
+    }
+
+    @media(width >=768px) {
+        right: 0;
+        top: 68px;
+        height: auto;
+
+    }
+
+
+    ul {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        z-index: 1;
-        right: -100%;
-        transition: 0.3s all ease-out;
+        flex-direction: column;
+        gap: 2rem;
+        list-style: none;
 
         @media(width >=768px) {
-            position: static;
-            height: auto;
-
+            flex-direction: row;
         }
 
+        li {
+            a {
+                text-decoration: none;
+                color: #ffff;
 
-        ul {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            list-style: none;
-
-            @media(width >=768px) {
-                flex-direction: row;
-            }
-
-            li {
-                a {
-                    text-decoration: none;
-                    color: #ffff;
-
-                    @media(width>=768px) {
-                        display: block;
-                        padding: 1rem 2rem;
-                    }
+                @media(width>=768px) {
+                    display: block;
+                    padding: 1rem 2rem;
                 }
             }
-
-
         }
 
-        .active {
-            right: 0;
-            left: 0;
-        }
 
     }
 
-    .drawerMenu.active {
-        right: 0;
+
+
+}
+
+.drawerMenu.active {
+    right: 0;
+}
+
+#headerWrap {
+
+    background-color: black;
+    position: fixed;
+    width: 100vw;
+    height: 68px;
+    z-index: 1000;
+
+}
+
+#menuButton {
+
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: black;
+    position: fixed;
+    top: 15px;
+    left: 10px;
+    z-index: 10000;
+
+    @media(width >=768px) {
+        display: none;
+    }
+}
+
+span {
+    display: block;
+    width: 38px;
+    height: 5px;
+    background-color: #ffff;
+    position: absolute;
+    transition: 500ms;
+
+    &:nth-child(1) {
+        top: 11px;
+        inset-inline: 0;
+        margin-inline: auto;
     }
 
-    #headerWrap {
-        background-color: black;
-        position: fixed;
-        width: 100vw;
-        height: 68px;
+    &:nth-child(2) {
+        inset: 0;
+        margin: auto;
+
     }
 
-    #menuButton {
+    &:nth-child(3) {
+        bottom: 11px;
+        inset-inline: 0;
+        margin-inline: auto;
 
-        width: 50px;
-        height: 50px;
-        border-radius: 4px;
-        background-color: black;
-        position: fixed;
-        top: 15px;
-        left: 10px;
-        z-index: 10000;
     }
+}
 
+#menuButton.active {
     span {
-        display: block;
-        width: 38px;
-        height: 5px;
-        background-color: #ffff;
-        position: absolute;
         transition: 500ms;
+    }
 
-        &:nth-child(1) {
-            top: 11px;
-            inset-inline: 0;
-            margin-inline: auto;
+    span:nth-child(1) {
+        inset: 50% 0;
+        transform: rotate(405deg);
+
+    }
+
+    span:nth-child(2) {
+        transform: scale(0);
+    }
+
+    span:nth-child(3) {
+        inset: 50% 0;
+        transform: rotate(-405deg);
+
+    }
+
+}
+
+// ゲーム概要
+
+#about {
+    height: 850px;
+    position: relative;
+
+    svg {
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        transform: translate(-60%, -50%)
+    }
+
+    #descWrap {
+        position: absolute;
+        text-align: center;
+        top: 8%;
+        left: 0;
+        right: 0;
+        padding: 16px;
+        margin-inline: 36px;
+        background-color: #00000058;
+
+
+        h2 {
+            color: #ffff;
+            font-weight: 300;
         }
 
-        &:nth-child(2) {
-            inset: 0;
-            margin: auto;
-
-        }
-
-        &:nth-child(3) {
-            bottom: 11px;
-            inset-inline: 0;
-            margin-inline: auto;
-
+        #aboutDesc {
+            color: #ffffffc0;
         }
     }
 
-    #menuButton.active {
-        span {
-            transition: 500ms;
-        }
 
-        span:nth-child(1) {
-            inset: 50% 0;
-            transform: rotate(405deg);
-
-        }
-
-        span:nth-child(2) {
-            transform: scale(0);
-        }
-
-        span:nth-child(3) {
-            inset: 50% 0;
-            transform: rotate(-405deg);
-
-        }
-
-    }
+}

@@ -1,0 +1,27 @@
+<!-- ボタンがメニューの下に潜り込まないようにヘッダーの外に移動 ※headerにもposition:fixedが設定してある-->
+
+<div id="menuButton" onclick="drawerButton()">
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+
+<header>
+    <div id="headerWrap">
+        <img src="" alt="" id="coumpanyLogo">
+        <Button class="btn" id="purchaseButton"></Button>
+    </div>
+
+</header>
+
+<!-- ドロワーメニューはz-indexの表示優先順位対策でヘッダーの外に移動 -->
+<nav class="drawerMenu">
+    <ul>
+        <li><a href="#">TOP</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">CHARACTER</a></li>
+        <li><a href="#">SYSTEM</a></li>
+        <li><a href="#">GALLERY</a></li>
+    </ul>
+</nav>

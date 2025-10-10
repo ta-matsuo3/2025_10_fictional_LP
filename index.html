@@ -7,49 +7,45 @@
     <meta name="description" content="架空のゲームのLPです">
     <title>Seraphic Errand</title>
     <meta name="robots" content="noindex,nofollow">
+
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+        rel="stylesheet">
+
+    <!-- 読み込み -->
     <link rel="stylesheet" href="css/style.css">
     <script src="js/drawerButton.js" async></script>
+    <script type="module" src="js/script.js"></script>
+
+
 </head>
 
 <body>
-    <!-- ドロワーメニューはz-indexの表示優先順位対策でヘッダーの外に移動 -->
-    <nav class="drawerMenu">
-        <ul>
-            <li><a href="#">TOP</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CHARACTER</a></li>
-            <li><a href="#">SYSTEM</a></li>
-            <li><a href="#">GALLERY</a></li>
-        </ul>
-    </nav>
-
-    <!-- ボタンがメニューの下に潜り込まないようにヘッダーの外に移動 ※headerにもposition:fixedが設定してある-->
-    <div id="menuButton" onclick="drawerButton()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <header>
-        <div id="headerWrap">
-            <img src="" alt="" id="coumpanyLogo">
-            <Button class="btn" id="purchaseButton"></Button>
-        </div>
-
-    </header>
+    <!-- ヘッダーはjavascriptで読み込み　-->
+    <div id="header"></div>
 
     <main>
         <!-- ファーストビュー -->
         <section id="firstView">
             <img src="" alt="" id="award">
-            <img src="" alt="" id="titleLogo">
-            <p id="catchcopy">目指すは神の座する頂ーー</p>
+            <!-- <div id="logoWrap">
+                <img src="images/firstview/titleLogo.png" alt="" id="titleLogo">
+                <p id="catchcopy">目指すは神の座する頂ーー。</p>
+            </div> -->
         </section>
+
         <!-- ゲーム概要 -->
-        <section id="About">
-            <img src="" alt="" id="backgroundNoise">
-            <h2>ゲーム概要</h1>
-                <p id="aboutDescription">
+        <section id="about">
+
+            <!-- svgはjavascriptで読み込み　-->
+            <div id="svg"></div>
+
+            <div id="descWrap">
+                <h2>ゲーム概要</h2>
+                <p id="aboutDesc">
                     ある日、天から人間の形をした<br>
                     ”ナニカ”が落ちてきた。彼は言う－－。<br>
                     <br>
@@ -72,6 +68,7 @@
                     荒れた大地に佇む巨大な塔は<br>
                     いったい何なのか－－。<br>
                 </p>
+            </div>
         </section>
         <!-- キャラクター -->
         <section id="character">
@@ -131,23 +128,8 @@
             </div>
         </section>
     </main>
-
-    <footer>
-        <div id="iconWrap">
-            <img src="" alt="" class="CorporateLogo">
-            <img src="" alt="" class="CorporateLogo">
-            <img src="" alt="" class="CorporateLogo">
-            <img src="" alt="" class="CorporateLogo">
-            <img src="" alt="" class="CorporateLogo">
-        </div>
-
-        <div id="snsWrap">
-            <img src="" alt="" class="snsIcon">
-            <img src="" alt="" class="snsIcon">
-        </div>
-        <div id="copyright"><small>&copy; 2025 matsuo takuma</small></div>
-    </footer>
-
+    <!-- フッターはjavascriptで読み込み -->
+    <div id="footer"></div>
 
 </body>
 
