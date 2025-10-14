@@ -319,46 +319,6 @@ progress {
   cursor: default;
 }
 
-html {
-  overflow-x: hidden;
-}
-
-body {
-  font-family: "Noto Serif JP";
-  background-color: #D9D9D9;
-  overflow: hidden;
-}
-body p {
-  font-size: 15px;
-  line-height: 30px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.headding {
-  text-align: center;
-  font-family: "Gilda Display";
-  font-weight: 200;
-  font-size: 2.5rem;
-}
-
-.headdingRuby {
-  text-align: center;
-  line-height: 8px;
-}
-
-#firstView {
-  width: 100%;
-  aspect-ratio: 9/16;
-  background-image: url(../images/firstview/mainvisual.png);
-  background-size: cover;
-  background-position: 0 100%;
-  position: relative;
-}
-
 .drawerMenu {
   width: 100%;
   height: 100dvh;
@@ -416,6 +376,26 @@ img {
   height: 68px;
   z-index: 1000;
 }
+#headerWrap #coumpanyLogo {
+  position: absolute;
+  top: 15px;
+  left: 65px;
+  width: 150px;
+}
+#headerWrap #purchaseButton {
+  position: absolute;
+  width: 150px;
+  height: 25px;
+  right: 30px;
+  top: 25px;
+  border-radius: 3px;
+  background-color: #FF5050;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-family: "Noto Sans JP";
+  font-size: 12px;
+  font-weight: 600;
+}
 
 #menuButton {
   width: 50px;
@@ -471,6 +451,52 @@ span:nth-child(3) {
   transform: rotate(-405deg);
 }
 
+footer {
+  background-color: black;
+}
+footer #copyright {
+  text-align: center;
+}
+footer #copyright small {
+  color: white;
+}
+
+html {
+  overflow-x: hidden;
+}
+html body {
+  font-family: "Noto Serif JP";
+  background-color: #D9D9D9;
+  overflow: hidden;
+}
+html body p {
+  font-size: 15px;
+  line-height: 30px;
+}
+html img {
+  max-width: 100%;
+  height: auto;
+}
+html .headding {
+  text-align: center;
+  font-family: "Gilda Display";
+  font-weight: 200;
+  font-size: 2.5rem;
+}
+html .headdingRuby {
+  text-align: center;
+  line-height: 8px;
+}
+
+#firstView {
+  width: 100%;
+  aspect-ratio: 9/16;
+  background-image: url(../images/firstview/mainvisual.png);
+  background-size: cover;
+  background-position: 0 100%;
+  position: relative;
+}
+
 #about {
   height: 820px;
   position: relative;
@@ -506,51 +532,111 @@ span:nth-child(3) {
   background-position: bottom;
   padding-block: 36px;
 }
-
-.charaThumbnail {
+#character .charaThumbnail {
   border: 1px black solid;
   width: 150px;
   height: auto;
 }
-.charaThumbnail .imgBox {
+#character .charaThumbnail .imgBox {
   width: 150px;
   height: 180px;
   overflow: hidden;
 }
-.charaThumbnail .imgBox img {
+#character .charaThumbnail .imgBox img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.charaThumbnail .charaName {
+#character .charaThumbnail .charaName {
   text-align: center;
   color: white;
   background-color: black;
 }
-
-#thumbnailWrap {
+#character #thumbnailWrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-block: 64px;
   gap: 32px;
 }
-#thumbnailWrap :nth-child(1) .imgBox img {
+#character #thumbnailWrap :nth-child(1) .imgBox img {
   height: 200%;
   -o-object-position: -45px -30px;
      object-position: -45px -30px;
 }
-#thumbnailWrap :nth-child(2) .imgBox img {
+#character #thumbnailWrap :nth-child(2) .imgBox img {
   height: 125%;
   -o-object-position: 0px -10px;
      object-position: 0px -10px;
 }
-#thumbnailWrap :nth-child(3) .imgBox img {
+#character #thumbnailWrap :nth-child(3) .imgBox img {
   height: 180%;
   -o-object-position: -20px -30px;
      object-position: -20px -30px;
 }
-#thumbnailWrap :nth-child(4) .imgBox img {
+#character #thumbnailWrap :nth-child(4) .imgBox img {
   height: 190%;
   -o-object-position: -45px -30px;
      object-position: -45px -30px;
+}
+
+#system {
+  height: 1750px;
+  background-color: black;
+  padding-block: 2rem;
+}
+#system .headding {
+  color: white;
+}
+#system .headdingRuby {
+  color: white;
+}
+#system #systemUnity {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  margin-block-start: 1rem;
+}
+#system #systemUnity .systemWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+#system #systemUnity .systemWrap .descWrap .systemTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+  margin-block-end: 1rem;
+}
+#system #systemUnity .systemWrap .descWrap .systemDesc {
+  font-weight: 200;
+  color: white;
+}
+#system #systemUnity .systemWrap .photoFlame {
+  width: 340px;
+  height: 220px;
+  background-color: white;
+  transform: rotate(-7.33deg);
+}
+#system #systemUnity .systemWrap .photoFlame .inBox {
+  padding: 1.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#gallery {
+  height: 610px;
+  background-image: url(../images/gallery/headress.jpg);
+  background-size: cover;
+  background-position: -575px;
+  padding-block: 36px;
+}
+#gallery #scroll {
+  display: flex;
+  margin-block-start: 5rem;
+  gap: 8px;
+}
+#gallery #scroll img {
+  width: 170px;
 }/*# sourceMappingURL=style.css.map */

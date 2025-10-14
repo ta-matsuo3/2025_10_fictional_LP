@@ -1,0 +1,14 @@
+@use '../base/variables' as *;
+
+footer {
+    background-color: black;
+
+
+    #copyright {
+        text-align: center;
+
+        small {
+            color: #ffff;
+        }
+    }
+}
