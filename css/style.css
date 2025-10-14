@@ -319,9 +319,14 @@ progress {
   cursor: default;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Noto Serif JP";
   background-color: #D9D9D9;
+  overflow: hidden;
 }
 body p {
   font-size: 15px;
@@ -333,8 +338,16 @@ img {
   height: auto;
 }
 
-.backgroundSvg {
-  width: 100%;
+.headding {
+  text-align: center;
+  font-family: "Gilda Display";
+  font-weight: 200;
+  font-size: 2.5rem;
+}
+
+.headdingRuby {
+  text-align: center;
+  line-height: 8px;
 }
 
 #firstView {
@@ -459,11 +472,14 @@ span:nth-child(3) {
 }
 
 #about {
-  height: 850px;
+  height: 820px;
   position: relative;
 }
 #about svg {
   position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-60%, -50%);
 }
 #about #descWrap {
   position: absolute;
@@ -481,4 +497,24 @@ span:nth-child(3) {
 }
 #about #descWrap #aboutDesc {
   color: rgba(255, 255, 255, 0.7529411765);
+}
+
+#character {
+  height: 700px;
+  background-image: url(../images/character/background.jpg);
+  background-size: 450px;
+  background-position: bottom;
+}
+
+.charaThumbnail {
+  border: 1px black solid;
+  width: 150px;
+}
+.charaThumbnail .imgBox {
+  width: 150px;
+  height: 180px;
+}
+.charaThumbnail .imgBox img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=style.css.map */
