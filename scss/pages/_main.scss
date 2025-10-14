@@ -254,31 +254,75 @@ span {
     background-image: url(../images/character/background.jpg);
     background-size: 450px;
     background-position: bottom;
+    padding-block: 36px;
 }
 
 .charaThumbnail {
     border: 1px black solid;
     width: 150px;
+    height: auto;
 
     .imgBox {
         width: 150px;
         height: 180px;
+        overflow: hidden;
 
         img {
-            object-fit: ;
-            width: 50%;
-            height: 50%;
-
+            object-fit: cover;
         }
     }
+
+    .charaName {
+        text-align: center;
+        color: #ffff;
+        background-color: black;
+    }
+
 }
 
 #thumbnailWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-block: 64px;
+    gap: 32px;
+
+
     :nth-child(1) {
-        img {
+        .imgBox {
+            img {
+                height: 200%;
+                object-position: -45px -30px;
+            }
+        }
+    }
 
-            // object-position: -115px -55px;
+    :nth-child(2) {
+        .imgBox {
+            img {
+                height: 125%;
+                object-position: 0px -10px;
+            }
+        }
+    }
 
+    :nth-child(3) {
+        .imgBox {
+            img {
+                height: 180%;
+                object-position: -20px -30px;
+            }
+        }
+    }
+
+    :nth-child(4) {
+        .imgBox {
+            img {
+                height: 190%;
+                object-position: -45px -30px;
+            }
         }
     }
 }
+
+//////////////// キャラクター画面 /////////////////

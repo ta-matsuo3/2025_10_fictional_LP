@@ -504,17 +504,53 @@ span:nth-child(3) {
   background-image: url(../images/character/background.jpg);
   background-size: 450px;
   background-position: bottom;
+  padding-block: 36px;
 }
 
 .charaThumbnail {
   border: 1px black solid;
   width: 150px;
+  height: auto;
 }
 .charaThumbnail .imgBox {
   width: 150px;
   height: 180px;
+  overflow: hidden;
 }
 .charaThumbnail .imgBox img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.charaThumbnail .charaName {
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+#thumbnailWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-block: 64px;
+  gap: 32px;
+}
+#thumbnailWrap :nth-child(1) .imgBox img {
+  height: 200%;
+  -o-object-position: -45px -30px;
+     object-position: -45px -30px;
+}
+#thumbnailWrap :nth-child(2) .imgBox img {
+  height: 125%;
+  -o-object-position: 0px -10px;
+     object-position: 0px -10px;
+}
+#thumbnailWrap :nth-child(3) .imgBox img {
+  height: 180%;
+  -o-object-position: -20px -30px;
+     object-position: -20px -30px;
+}
+#thumbnailWrap :nth-child(4) .imgBox img {
+  height: 190%;
+  -o-object-position: -45px -30px;
+     object-position: -45px -30px;
 }/*# sourceMappingURL=style.css.map */
