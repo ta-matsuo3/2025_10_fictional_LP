@@ -57,18 +57,37 @@
                 border: 1px black solid;
             }
         }
+    }
+}
+
+#charaThumbnails {
+    height: 120px;
+    position: relative;
 
 
+    // position: absolute;
+    background-image: url();
+
+    svg {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-60%, 83%);
+        clip-path: inset(0 0 762px 0)
     }
 
-    #charaThumbnails {
+    #thumbnails {
+        position: absolute;
         display: flex;
         justify-content: space-around;
-        // position: absolute;
+        bottom: -15px;
+        left: 0;
+        right: 0;
+        margin-block: 1rem;
 
         .thumbnail {
             width: 75px;
-            aspect-ratio: 1/1;
+            height: 75px;
             object-fit: cover;
             border: 1px solid black;
         }

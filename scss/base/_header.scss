@@ -33,10 +33,18 @@
 
         .youtube {
             width: 130px;
+
+
         }
 
         .twitter {
             width: 70px;
+
+
+        }
+
+        @media(width>=768px) {
+            display: none;
         }
     }
 
@@ -76,6 +84,7 @@
 
                 @media(width>=768px) {
                     display: block;
+                    font-size: 1rem;
                     padding: 1rem 2rem;
                 }
             }

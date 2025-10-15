@@ -350,6 +350,11 @@ progress {
 .drawerMenu #snsWrap .twitter {
   width: 70px;
 }
+@media (width >= 768px) {
+  .drawerMenu #snsWrap {
+    display: none;
+  }
+}
 .drawerMenu .active {
   right: 0;
   left: 0;
@@ -380,6 +385,7 @@ progress {
 @media (width >= 768px) {
   .drawerMenu ul li a {
     display: block;
+    font-size: 1rem;
     padding: 1rem 2rem;
   }
 }
@@ -537,13 +543,31 @@ footer #copyright small {
   width: 355px;
   border: 1px black solid;
 }
-#charaWrap #charaThumbnails {
+
+#charaThumbnails {
+  height: 120px;
+  position: relative;
+  background-image: url();
+}
+#charaThumbnails svg {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-60%, 83%);
+  clip-path: inset(0 0 762px 0);
+}
+#charaThumbnails #thumbnails {
+  position: absolute;
   display: flex;
   justify-content: space-around;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  margin-block: 1rem;
 }
-#charaWrap #charaThumbnails .thumbnail {
+#charaThumbnails #thumbnails .thumbnail {
   width: 75px;
-  aspect-ratio: 1/1;
+  height: 75px;
   -o-object-fit: cover;
      object-fit: cover;
   border: 1px solid black;
