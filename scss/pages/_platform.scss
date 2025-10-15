@@ -1,1 +1,189 @@
 @use '../base/variables' as *;
+
+#platform {
+    font-family: $platformFont;
+    background-color: #ffff;
+
+    .btn {
+        width: 270px;
+        height: 50px;
+        background-color: $buttonColor ;
+        color: #ffff;
+        border-radius: 8px;
+        margin-inline: auto;
+
+
+    }
+
+    //送料無料バナー
+    #followHeader {
+        width: 100%;
+        position: fixed;
+
+        #postageBanner {
+            font-family: $postageFont;
+            background-color: #FFCC00;
+            height: 55px;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+
+
+            #desc {
+                padding-inline-start: 1rem;
+
+
+                :nth-child(1) {
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+
+                :nth-child(2) {
+                    font-size: 24px;
+                    line-height: 14px;
+                    font-weight: 800;
+
+                    span {
+                        font-size: 20px;
+                        font-weight: 800;
+
+                    }
+
+                }
+            }
+        }
+
+        // メニューバー
+        #menubar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            height: 40px;
+            background-color: #ffff;
+
+            font-weight: 600;
+        }
+    }
+
+    #pkgIllust {
+        width: 100%;
+        aspect-ratio: 16/9;
+        background-image: url(../images/firstview/mainvisual.png);
+        background-size: cover;
+        background-position: 0 100%;
+        margin-block-start: 110px;
+    }
+
+    #mainInfo {
+        margin-inline: 8px;
+        margin-block: 36px;
+
+        #titleWrap {
+            display: flex;
+            justify-content: space-between;
+
+            #title {
+                font-weight: 400;
+            }
+
+            img {
+                object-fit: contain;
+            }
+        }
+
+        #type {
+            color: #777777;
+            font-size: 13px;
+        }
+
+        #catchCopy {
+            font-weight: 600;
+        }
+    }
+
+    #reference {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+
+
+        img {
+            width: calc(100%/3 - 6px * 2);
+            border-radius: 4px;
+        }
+    }
+
+    #priceWrap {
+        margin-inline: 8px;
+        margin-block: 36px;
+
+        :nth-child(1) {
+            font-size: 20px;
+        }
+
+        #tax {
+            font-size: 10px;
+        }
+
+    }
+
+    #btnArea {
+        width: 100%;
+        display: flex;
+
+        .btn {
+            margin-inline: auto;
+        }
+    }
+
+    #info {
+        margin: 1rem;
+
+        table {
+            border-collapse: collapse;
+
+            :first-child {
+                th {
+                    border-top: 2px $borderGray solid;
+                }
+
+                td {
+                    border-top: 2px $borderGray solid;
+                }
+            }
+
+            tr {
+
+
+                th {
+                    border-bottom: 2px $borderGray solid;
+
+                }
+
+                td {
+                    border-bottom: 2px $borderGray solid;
+                    padding-block: 10px;
+
+                    li {
+                        list-style: none;
+                        ;
+                    }
+                }
+            }
+
+            :last-child {
+                th {
+                    border-bottom: none
+                }
+
+                td {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+
+
+}

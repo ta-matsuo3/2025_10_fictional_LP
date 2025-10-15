@@ -7,75 +7,118 @@
     <meta name="description" content="架空のゲームのLPです">
     <title>購入プラットフォーム</title>
     <meta name="robots" content="noindex,nofollow">
+
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=M+PLUS+1p:wght@100;300;400;500;700;800;900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200&display=swap"
+        rel="stylesheet">
+
+    <!-- 読み込み -->
     <link rel="stylesheet" href="css/style.css">
     <script type="module" src="js/script.js"></script>
 </head>
 
 <body>
-    <header>
-        <div id="postageBanner">
-            <div id="Desc">
-                <p>ダウンロードソフトも合算対象になりました</p>
-                <p>500円以上で送料無料</p>
+    <div id="platform">
+        <header>
+            <div id="followHeader">
+                <div id="postageBanner">
+                    <div id="desc">
+                        <p>ダウンロードソフトも合算対象になりました</p>
+                        <p>6,000円<span>以上で</span>送料無料</p>
+                    </div>
+                    <img src="images/platform/postageIcon.png" alt="" class="logo">
+                </div>
+                <div id="menubar">
+                    <p class="item">トップ</p>
+                    <p class="item">ホーム</p>
+                    <p class="item">戻る</p>
+                    <p class="item">リターン</p>
+                    <p class="item">インデックス</p>
+                </div>
             </div>
-            <img src="" alt="" class="logo">
-        </div>
-        <div id="menubar">
-            <p class="item"></p>
-            <p class="item"></p>
-            <p class="item"></p>
-            <p class="item"></p>
-            <p class="item"></p>
-        </div>
-
-    </header>
-
-    <main>
-        <img src="" alt="" class="pkgIllust">
-
-        <div id="titleWrap">
-            <h1 id="title">Seraphic Errand</h1>
-            <img src="" alt="" class="favoIcon">
-        </div>
-        <p id="type">ソフト</p>
-        <p id="catchCopy">目指すは神の座する頂－－。</p>
-        <div id="reference">
-            <img src="" alt="" class="Img">
-            <img src="" alt="" class="Img">
-            <img src="" alt="" class="Img">
-        </div>
-
-        <p class="price"></p>
-        <button class="btn cartInL"></button>
-
-        <div class="info">
-            <p>必要な容量</p>
-            <p>プレイモード</p>
-            <p>プレイ人数</p>
-            <p>ファミリーへの貸出</p>
-            <p>セーブデータのお預かり</p>
-            <p>対象本体</p>
-            <p>メーカー</p>
-            <p>対応言語</p>
-            <p>配信日</p>
-            <p>CERO</p>
-        </div>
-        <div id="followBanner">
-            <div id="desc">
-                <p>種類：ダウンロード版</p>
-                <p>1点</p>
+        </header>
+        <main>
+            <img src="images/platform/pkg.png" alt="" id="pkgIllust">
+            <div id="mainInfo">
+                <div id="titleWrap">
+                    <h1 id="title">Seraphic Errand</h1>
+                    <img src="images/platform/favoButton.png" alt="" class="favoIcon">
+                </div>
+                <p id="type">ソフト</p>
+                <p id="catchCopy">目指すは神の座する頂－－。</p>
             </div>
-            <button class="btn cartInS"></button>
-        </div>
-
-
-    </main>
-
-    <footer>
-        <div id="copyright">
-            <small>&copy; 2025 matsuo takuma</small>
-        </div>
-    </footer>
+            <div id="reference">
+                <img src="images/system/testImage.jpg" alt="" class="Img">
+                <img src="images/gallery/headress.jpg" alt="" class="Img">
+                <img src="images/gallery/shadow.jpg" alt="" class="Img">
+            </div>
+            <div id="priceWrap">
+                <p id="price">
+                    2500円
+                    <span id="tax">税込</span>
+                </p>
+            </div>
+            <div id="btnArea"><button class="btn cartInL">カートに入れる</button></div>
+            <div id="info">
+                <h2>詳細情報</h2>
+                <table>
+                    <tr>
+                        <th>必要な容量</th>
+                        <td>30GB</td>
+                    </tr>
+                    <tr>
+                        <th>プレイ人数</th>
+                        <td>1人</td>
+                    </tr>
+                    <tr>
+                        <th>ファミリーへの貸出</th>
+                        <td>対応</td>
+                    </tr>
+                    <tr>
+                        <th>セーブデータのお預かり</th>
+                        <td>対応</td>
+                    </tr>
+                    <tr>
+                        <th>対象本体</th>
+                        <td>
+                            <li>PC</li>
+                            <li>据え置きハードウェア</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>メーカー</th>
+                        <td>nonexistent company</td>
+                    </tr>
+                    <tr>
+                        <th>対応言語</th>
+                        <td>日本語, 英語, フランス語, イタリア語, ドイツ語, スペイン語, オランダ語, ロシア語, 韓国語, 中国語 (簡体字), 中国語 (繁体字)</td>
+                    </tr>
+                    <tr>
+                        <th>配信日</th>
+                        <td>2099/99/99</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="followFooter">
+                <div id="desc">
+                    <p>種類：ダウンロード版</p>
+                    <div id="amount">
+                        <p>1点</p>
+                        <p>2500円<span>税込</span></p>
+                    </div>
+                </div>
+                <button class="btn cartInS">カートに入れる</button>
+            </div>
+        </main>
+        <footer>
+            <div id="copyright">
+                <small>&copy; 2025 matsuo takuma</small>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

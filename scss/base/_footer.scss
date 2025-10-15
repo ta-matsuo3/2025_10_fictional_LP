@@ -3,6 +3,28 @@
 footer {
     background-color: black;
 
+    #snsWrap {
+        display: flex;
+        justify-content: center;
+        padding-block-start: 1rem;
+        gap: 2rem;
+
+        img {
+            object-fit: contain;
+
+        }
+
+        .youtube {
+            width: 50px;
+        }
+
+        .twitter {
+            width: 30px;
+        }
+    }
+
+
+
 
     #copyright {
         text-align: center;
