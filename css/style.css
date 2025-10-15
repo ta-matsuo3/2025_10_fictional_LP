@@ -495,6 +495,60 @@ footer #copyright small {
   color: white;
 }
 
+#charaWrap {
+  max-width: 768px;
+  height: 780px;
+  background-image: url(../images/character/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#charaWrap #charaVisual {
+  margin-block-start: 60px;
+  position: relative;
+}
+#charaWrap #charaVisual .linesLeft {
+  left: 2rem;
+}
+#charaWrap #charaVisual .linesRight {
+  right: 2rem;
+}
+#charaWrap #charaVisual .lines {
+  position: absolute;
+  writing-mode: vertical-rl;
+  font-size: 20px;
+  font-weight: 600;
+  top: 1rem;
+}
+#charaWrap #charaVisual img {
+  display: block;
+  margin-inline: auto;
+}
+#charaWrap #charaTextWrapArea #charaTextWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#charaWrap #charaTextWrapArea #charaTextWrap #charaName {
+  font-size: 32px;
+  font-weight: 600;
+}
+#charaWrap #charaTextWrapArea #charaTextWrap #charaDesc {
+  width: 355px;
+  border: 1px black solid;
+}
+#charaWrap #charaThumbnails {
+  display: flex;
+  justify-content: space-around;
+}
+#charaWrap #charaThumbnails .thumbnail {
+  width: 75px;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid black;
+}
+
 html {
   overflow-x: hidden;
 }
@@ -680,11 +734,13 @@ html .headdingRuby {
   background-color: white;
 }
 #platform .btn {
-  width: 270px;
-  height: 50px;
   background-color: #FF5050;
   color: white;
   border-radius: 8px;
+}
+#platform .cartInL {
+  width: 270px;
+  height: 50px;
   margin-inline: auto;
 }
 #platform #followHeader {
@@ -782,21 +838,32 @@ html .headdingRuby {
 #platform #info {
   margin: 1rem;
 }
+#platform #info h2 {
+  padding-block: 1rem;
+  font-size: 1.5rem;
+}
 #platform #info table {
   border-collapse: collapse;
+  margin-bottom: 70px;
 }
 #platform #info table :first-child th {
-  border-top: 2px #e0e0e0 solid;
+  border-top: 2px #ececec solid;
 }
 #platform #info table :first-child td {
-  border-top: 2px #e0e0e0 solid;
+  border-top: 2px #ececec solid;
 }
 #platform #info table tr th {
-  border-bottom: 2px #e0e0e0 solid;
+  border-bottom: 2px #ececec solid;
+  min-width: 90px;
+  text-align: start;
+  color: #777777;
+  font-size: 12px;
 }
 #platform #info table tr td {
-  border-bottom: 2px #e0e0e0 solid;
+  border-bottom: 2px #ececec solid;
   padding-block: 10px;
+  padding-inline-start: 3rem;
+  width: 500px;
 }
 #platform #info table tr td li {
   list-style: none;
@@ -806,4 +873,43 @@ html .headdingRuby {
 }
 #platform #info table :last-child td {
   border-bottom: none;
+}
+#platform #followFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  bottom: 0;
+  border-top: 2px #ececec solid;
+  padding: 1rem;
+}
+#platform #followFooter #desc {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#platform #followFooter #desc #cartType {
+  color: #777777;
+  font-size: 12px;
+  line-height: 8px;
+}
+#platform #followFooter #desc #amount {
+  display: flex;
+}
+#platform #followFooter #desc #amount p {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1rem;
+}
+#platform #followFooter #desc #amount p #amountPrice {
+  font-size: 16px;
+  line-height: 1rem;
+}
+#platform #followFooter .cartInS {
+  width: 150px;
+  height: 35px;
+  font-size: 12px;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */

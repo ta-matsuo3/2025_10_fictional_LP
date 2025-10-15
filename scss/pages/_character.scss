@@ -1,1 +1,76 @@
 @use '../base/variables' as *;
+
+#charaWrap {
+    max-width: 768px;
+    height: 780px;
+    background-image: url(../images/character/background.jpg);
+    background-size: cover;
+    background-position: center;
+
+    #charaVisual {
+        margin-block-start: 60px;
+        position: relative;
+
+        .linesLeft {
+            left: 2rem;
+
+        }
+
+        .linesRight {
+            right: 2rem;
+        }
+
+
+        .lines {
+            position: absolute;
+            writing-mode: vertical-rl;
+            font-size: 20px;
+            font-weight: 600;
+            top: 1rem;
+        }
+
+
+
+        img {
+            display: block;
+            margin-inline: auto;
+        }
+    }
+
+    #charaTextWrapArea {
+
+
+        #charaTextWrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+
+            #charaName {
+                font-size: 32px;
+                font-weight: 600;
+            }
+
+            #charaDesc {
+                width: 355px;
+                border: 1px black solid;
+            }
+        }
+
+
+    }
+
+    #charaThumbnails {
+        display: flex;
+        justify-content: space-around;
+        // position: absolute;
+
+        .thumbnail {
+            width: 75px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border: 1px solid black;
+        }
+    }
+}
