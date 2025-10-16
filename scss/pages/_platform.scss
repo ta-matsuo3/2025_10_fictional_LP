@@ -1,5 +1,139 @@
 @use '../base/variables' as *;
 
+// モーダル
+
+/* グレー背景 */
+.layer {
+    background: rgba(0, 0, 0, .2);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 100ms linear, visibility 100ms linear, z-index 100ms linear;
+}
+
+
+
+.layer.is-open {
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+}
+
+.layer.is-open .modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__button-wrap {
+    position: absolute;
+    right: 10px;
+    top: -28px;
+    display: inline-flex;
+}
+
+
+.close-button {
+    position: relative;
+    width: 39px;
+    height: 39px;
+    background: orange;
+    border-radius: 50%;
+    padding: 0;
+    border: transparent;
+    cursor: pointer;
+}
+
+.close-button span {
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    left: calc(50% - 12px);
+    top: 50%;
+    border-radius: 20px;
+}
+
+.close-button span:nth-child(1) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.close-button span:nth-child(2) {
+    transform: rotate(-45deg) translate(1px, -1px);
+}
+
+
+
+.modal {
+    position: relative;
+    margin-inline: auto;
+
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 100ms linear, opacity 100ms linear;
+}
+
+
+.modal__inner {
+    position: relative;
+    margin-block: 150px;
+    margin-inline: auto;
+    background: #fff;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+    display: block;
+    padding: 21px 8px 21px;
+    height: auto;
+}
+
+.modal__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 23px;
+
+    img {
+        width: 140px;
+        object-fit: cover;
+        margin-block: 0.5rem;
+    }
+
+    :nth-child(1) {
+        font-size: 16px;
+        font-weight: 600;
+
+    }
+
+    :nth-child(3) {
+        font-size: 20px;
+
+    }
+
+    :nth-child(4) {
+        color: ;
+    }
+
+
+}
+
+
+.modal__button-area {
+    max-width: 843px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 17px;
+    padding-top: 15px;
+}
+
 #platform {
     font-family: $platformFont;
     background-color: #ffff;
@@ -21,6 +155,11 @@
     #followHeader {
         width: 100%;
         position: fixed;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
 
         #postageBanner {
             font-family: $postageFont;

@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/drawerButton.js" async></script>
     <script type="module" src="js/script.js"></script>
+    <script src="js/character.js" async></script>
+
 </head>
 
 <body>
@@ -30,7 +32,7 @@
             <div id="charaVisual">
                 <p class="lines linesLeft">「（話が長いな・・・聞こえなかったフリしよ）」</p>
                 <p class="lines linesRight">「・・・。」</p>
-                <img src="images/character/engel.png" alt="">
+                <img src="images/character/engel.png" alt="" id="charaImg">
             </div>
 
             <div id="charaTextWrapArea">
@@ -49,10 +51,10 @@
     <section id="charaThumbnails">
         <div id="svg"></div>
         <div id="thumbnails">
-            <div><img src="images/character/engel_face.png" alt="" class="thumbnail"></div>
-            <img src="images/character/drone_face.png" alt="" class="thumbnail">
-            <img src="images/character/oldman_face.png" alt="" class="thumbnail">
-            <img src="images/character/girl_face.png" alt="" class="thumbnail">
+            <img src="images/character/engel_face.png" alt="" class="thumbnail" onclick="loadEngel()">
+            <img src="images/character/drone_face.png" alt="" class="thumbnail" onclick="loadDrone()">
+            <img src="images/character/oldman_face.png" alt="" class="thumbnail" onclick="loadOldman()">
+            <img src="images/character/girl_face.png" alt="" class="thumbnail" onclick="loadGirl()">
         </div>
     </section>
 

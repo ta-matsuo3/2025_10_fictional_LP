@@ -336,6 +336,7 @@ progress {
 .drawerMenu #snsWrap {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-block-start: 4rem;
   margin-inline-end: 2rem;
   gap: 4rem;
@@ -481,6 +482,7 @@ footer {
 footer #snsWrap {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-block-start: 1rem;
   gap: 2rem;
 }
@@ -513,10 +515,10 @@ footer #copyright small {
   position: relative;
 }
 #charaWrap #charaVisual .linesLeft {
-  left: 2rem;
+  left: 2.5rem;
 }
 #charaWrap #charaVisual .linesRight {
-  right: 2rem;
+  right: 2.5rem;
 }
 #charaWrap #charaVisual .lines {
   position: absolute;
@@ -545,7 +547,7 @@ footer #copyright small {
 }
 
 #charaThumbnails {
-  height: 120px;
+  height: 150px;
   position: relative;
   background-image: url();
 }
@@ -553,14 +555,14 @@ footer #copyright small {
   position: absolute;
   bottom: 10px;
   left: 50%;
-  transform: translate(-60%, 83%);
-  clip-path: inset(0 0 762px 0);
+  transform: translate(-60%, 80%);
+  clip-path: inset(0 0 735px 0);
 }
 #charaThumbnails #thumbnails {
   position: absolute;
   display: flex;
   justify-content: space-around;
-  bottom: -15px;
+  bottom: -5px;
   left: 0;
   right: 0;
   margin-block: 1rem;
@@ -753,6 +755,120 @@ html .headdingRuby {
   width: 170px;
 }
 
+/* グレー背景 */
+.layer {
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 100ms linear, visibility 100ms linear, z-index 100ms linear;
+}
+
+.layer.is-open {
+  z-index: 999;
+  opacity: 1;
+  visibility: visible;
+}
+
+.layer.is-open .modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__button-wrap {
+  position: absolute;
+  right: 10px;
+  top: -28px;
+  display: inline-flex;
+}
+
+.close-button {
+  position: relative;
+  width: 39px;
+  height: 39px;
+  background: orange;
+  border-radius: 50%;
+  padding: 0;
+  border: transparent;
+  cursor: pointer;
+}
+
+.close-button span {
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  display: inline-block;
+  position: absolute;
+  left: calc(50% - 12px);
+  top: 50%;
+  border-radius: 20px;
+}
+
+.close-button span:nth-child(1) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.close-button span:nth-child(2) {
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+.modal {
+  position: relative;
+  margin-inline: auto;
+  width: 300px;
+  height: 300px;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 100ms linear, opacity 100ms linear;
+}
+
+.modal__inner {
+  position: relative;
+  margin-block: 150px;
+  margin-inline: auto;
+  background: #fff;
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 13px;
+  display: block;
+  padding: 21px 8px 21px;
+  height: auto;
+}
+
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 23px;
+}
+.modal__content img {
+  width: 140px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-block: 0.5rem;
+}
+.modal__content :nth-child(1) {
+  font-size: 16px;
+  font-weight: 600;
+}
+.modal__content :nth-child(3) {
+  font-size: 20px;
+}
+
+.modal__button-area {
+  max-width: 843px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 17px;
+  padding-top: 15px;
+}
+
 #platform {
   font-family: "Noto Sans JP";
   background-color: white;
@@ -770,6 +886,10 @@ html .headdingRuby {
 #platform #followHeader {
   width: 100%;
   position: fixed;
+}
+#platform #followHeader a {
+  text-decoration: none;
+  color: black;
 }
 #platform #followHeader #postageBanner {
   font-family: "M PLUS 1p";

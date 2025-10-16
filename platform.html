@@ -18,10 +18,33 @@
     <!-- 読み込み -->
     <link rel="stylesheet" href="css/style.css">
     <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/platform.js"></script>
 </head>
 
 <body>
+
     <div id="platform">
+        <div class="layer js-modal">
+            <div class="modal">
+                <div class="modal__inner">
+                    <!-- ×ボタン追記 -->
+                    <div class="modal__button-wrap">
+                        <button class="close-button js-close-button">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="modal__contents">
+                        <div class="modal__content">
+                            <p class="message">この商品がカートに入りました</p>
+                            <img src="images/platform/pkgThumbnail.png" alt="">
+                            <p class="title">Seraphic Errand</p>
+                            <p class="type">ソフト</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <header>
             <div id="followHeader">
                 <div id="postageBanner">
@@ -31,13 +54,15 @@
                     </div>
                     <img src="images/platform/postageIcon.png" alt="" class="logo">
                 </div>
-                <div id="menubar">
-                    <p class="item">トップ</p>
-                    <p class="item">ホーム</p>
-                    <p class="item">戻る</p>
-                    <p class="item">リターン</p>
-                    <p class="item">インデックス</p>
-                </div>
+                <a href="index.html">
+                    <div id="menubar">
+                        <p class="item">トップ</p>
+                        <p class="item">ホーム</p>
+                        <p class="item">戻る</p>
+                        <p class="item">リターン</p>
+                        <p class="item">インデックス</p>
+                    </div>
+                </a>
             </div>
         </header>
         <main>
@@ -61,7 +86,7 @@
                     <span id="tax">税込</span>
                 </p>
             </div>
-            <div id="btnArea"><button class="btn cartInL">カートに入れる</button></div>
+            <div id="btnArea"><button class="btn cartInL js-modal-button">カートに入れる</button></div>
             <div id="info">
                 <h2>詳細情報</h2>
                 <table>
@@ -109,7 +134,7 @@
                         <p>1点<span id="amountPrice"> 2,500 </span>円 税込</p>
                     </div>
                 </div>
-                <button class="btn cartInS">カートに入れる</button>
+                <button class="btn cartInS js-modal-button">カートに入れる</button>
             </div>
         </main>
         <footer>

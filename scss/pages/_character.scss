@@ -12,12 +12,12 @@
         position: relative;
 
         .linesLeft {
-            left: 2rem;
+            left: 2.5rem;
 
         }
 
         .linesRight {
-            right: 2rem;
+            right: 2.5rem;
         }
 
 
@@ -61,7 +61,7 @@
 }
 
 #charaThumbnails {
-    height: 120px;
+    height: 150px;
     position: relative;
 
 
@@ -72,15 +72,15 @@
         position: absolute;
         bottom: 10px;
         left: 50%;
-        transform: translate(-60%, 83%);
-        clip-path: inset(0 0 762px 0)
+        transform: translate(-60%, 80%);
+        clip-path: inset(0 0 735px 0)
     }
 
     #thumbnails {
         position: absolute;
         display: flex;
         justify-content: space-around;
-        bottom: -15px;
+        bottom: -5px;
         left: 0;
         right: 0;
         margin-block: 1rem;

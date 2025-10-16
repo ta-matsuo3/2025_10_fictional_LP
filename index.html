@@ -17,9 +17,8 @@
 
     <!-- 読み込み -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/drawerButton.js" async></script>
     <script type="module" src="js/script.js"></script>
-
+    <script src="js/drawerButton.js" defer></script>
 
 </head>
 
@@ -78,24 +77,33 @@
             </div>
 
             <div id="thumbnailWrap">
-                <div class="charaThumbnail">
-                    <div class="imgBox"><img src="images/character/engel.png" alt="" class="characterImg"></div>
-                    <p class="charaName">天使（主人公）</p>
-                </div>
-                <div class="charaThumbnail">
-                    <div class="imgBox"><img src="images/character/drone.png" alt="" class="characterImg"></div>
-                    <p class="charaName">チャッピー</p>
-                </div>
-                <div class="charaThumbnail">
-                    <div class="imgBox"><img src="images/character/oldman.png" alt="" class="characterImg"></div>
-                    <p class="charaName">下界の村長</p>
-                </div>
-                <div class="charaThumbnail">
-                    <div class="imgBox"><img src="images/character/girl.png" alt="" class="characterImg"></div>
-                    <p class="charaName">エンジニア</p>
-                </div>
+                <a href="character.html?engel">
+                    <div class="charaThumbnail">
+                        <div class="imgBox"><img src="images/character/engel.png" alt="" class="characterImg"></div>
+                        <p class="charaName">天使（主人公）</p>
+                    </div>
+                </a>
+                <a href="character.html?drone">
+                    <div class="charaThumbnail">
+                        <div class="imgBox"><img src="images/character/drone.png" alt="" class="characterImg"></div>
+                        <p class="charaName">チャッピー</p>
+                    </div>
+                </a>
+                <a href="character.html?oldman">
+                    <div class="charaThumbnail">
+                        <div class="imgBox"><img src="images/character/oldman.png" alt="" class="characterImg"></div>
+                        <p class="charaName">下界の村長</p>
+                    </div>
+                </a>
+                <a href="character.html?girl">
+                    <div class="charaThumbnail">
+                        <div class="imgBox"><img src="images/character/girl.png" alt="" class="characterImg"></div>
+                        <p class="charaName">エンジニア</p>
+                    </div>
+                </a>
             </div>
         </section>
+
         <!-- システム -->
         <section id="system">
             <div class="headdingWrap">
