@@ -504,7 +504,6 @@ footer #copyright small {
 }
 
 #charaWrap {
-  max-width: 768px;
   height: 780px;
   background-image: url(../images/character/background.jpg);
   background-size: cover;
@@ -512,7 +511,14 @@ footer #copyright small {
 }
 #charaWrap #charaVisual {
   margin-block-start: 60px;
+  max-width: 768px;
   position: relative;
+  margin-inline: auto;
+}
+@media (width >= 768px) {
+  #charaWrap #charaVisual {
+    margin-block-start: 120px;
+  }
 }
 #charaWrap #charaVisual .linesLeft {
   left: 2.5rem;
@@ -528,14 +534,23 @@ footer #copyright small {
   top: 1rem;
 }
 #charaWrap #charaVisual img {
+  min-width: 390px;
   display: block;
   margin-inline: auto;
+}
+#charaWrap #charaTextWrapArea {
+  position: relative;
 }
 #charaWrap #charaTextWrapArea #charaTextWrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -125px;
+  margin-inline: auto;
 }
 #charaWrap #charaTextWrapArea #charaTextWrap #charaName {
   font-size: 32px;
@@ -547,22 +562,24 @@ footer #copyright small {
 }
 
 #charaThumbnails {
-  height: 150px;
+  height: 90px;
   position: relative;
+  max-width: 768px;
+  margin-inline: auto;
   background-image: url();
 }
 #charaThumbnails svg {
   position: absolute;
   bottom: 10px;
   left: 50%;
-  transform: translate(-60%, 80%);
-  clip-path: inset(0 0 735px 0);
+  transform: translate(-60%, 82%);
+  clip-path: inset(0 0 753px 0);
 }
 #charaThumbnails #thumbnails {
   position: absolute;
   display: flex;
   justify-content: space-around;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
   right: 0;
   margin-block: 1rem;
@@ -573,6 +590,7 @@ footer #copyright small {
   -o-object-fit: cover;
      object-fit: cover;
   border: 1px solid black;
+  background-color: white;
 }
 
 html {
@@ -610,6 +628,13 @@ html .headdingRuby {
   background-position: 0 100%;
   position: relative;
 }
+@media (width >= 768px) {
+  #firstView {
+    background-image: url(../images/firstview/mainvisual_pc.png);
+    margin-block-start: 120px;
+    aspect-ratio: 16/9;
+  }
+}
 
 #about {
   height: 820px;
@@ -623,12 +648,13 @@ html .headdingRuby {
 }
 #about #descWrap {
   position: absolute;
+  max-width: 768px;
   text-align: center;
   top: 8%;
   left: 0;
   right: 0;
   padding: 16px;
-  margin-inline: 36px;
+  margin-inline: auto;
   background-color: rgba(0, 0, 0, 0.3450980392);
 }
 #about #descWrap h2 {
@@ -642,7 +668,7 @@ html .headdingRuby {
 #character {
   height: 700px;
   background-image: url(../images/character/background.jpg);
-  background-size: 450px;
+  background-size: 600px;
   background-position: bottom;
   padding-block: 36px;
 }
@@ -755,6 +781,71 @@ html .headdingRuby {
   width: 170px;
 }
 
+.platformBody {
+  background-color: white;
+  font-family: "Noto Sans JP";
+}
+
+.btn {
+  background-color: #FF5050;
+  color: white;
+  border-radius: 8px;
+}
+
+#followHeader {
+  width: 100%;
+  position: fixed;
+}
+#followHeader a {
+  text-decoration: none;
+  color: black;
+}
+#followHeader #postageBanner {
+  font-family: "M PLUS 1p";
+  background-color: #FFCC00;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+#followHeader #postageBanner #desc {
+  padding-inline-start: 1rem;
+  white-space: nowrap;
+}
+#followHeader #postageBanner #desc :nth-child(1) {
+  font-size: 13px;
+  font-weight: 400;
+}
+#followHeader #postageBanner #desc :nth-child(2) {
+  font-size: 24px;
+  line-height: 14px;
+  font-weight: 800;
+}
+#followHeader #postageBanner #desc :nth-child(2) span {
+  font-size: 20px;
+  font-weight: 800;
+}
+@media (width >= 768px) {
+  #followHeader #postageBanner #desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #followHeader #postageBanner #desc :nth-child(1) {
+    font-size: 18px;
+  }
+}
+#followHeader #menubarArea #menubar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 768px;
+  height: 40px;
+  background-color: white;
+  margin-inline: auto;
+  font-weight: 600;
+}
+
 /* グレー背景 */
 .layer {
   background: rgba(0, 0, 0, 0.2);
@@ -782,8 +873,8 @@ html .headdingRuby {
 
 .modal__button-wrap {
   position: absolute;
-  right: 10px;
-  top: -28px;
+  right: -15px;
+  top: -20px;
   display: inline-flex;
 }
 
@@ -791,7 +882,7 @@ html .headdingRuby {
   position: relative;
   width: 39px;
   height: 39px;
-  background: orange;
+  background: #EDEDED;
   border-radius: 50%;
   padding: 0;
   border: transparent;
@@ -800,8 +891,8 @@ html .headdingRuby {
 
 .close-button span {
   width: 25px;
-  height: 2px;
-  background: #fff;
+  height: 4px;
+  background: black;
   display: inline-block;
   position: absolute;
   left: calc(50% - 12px);
@@ -860,6 +951,9 @@ html .headdingRuby {
 .modal__content :nth-child(3) {
   font-size: 20px;
 }
+.modal__content :nth-child(4) {
+  color: #777777;
+}
 
 .modal__button-area {
   max-width: 843px;
@@ -870,58 +964,13 @@ html .headdingRuby {
 }
 
 #platform {
-  font-family: "Noto Sans JP";
-  background-color: white;
-}
-#platform .btn {
-  background-color: #FF5050;
-  color: white;
-  border-radius: 8px;
+  max-width: 768px;
+  margin-inline: auto;
 }
 #platform .cartInL {
   width: 270px;
   height: 50px;
   margin-inline: auto;
-}
-#platform #followHeader {
-  width: 100%;
-  position: fixed;
-}
-#platform #followHeader a {
-  text-decoration: none;
-  color: black;
-}
-#platform #followHeader #postageBanner {
-  font-family: "M PLUS 1p";
-  background-color: #FFCC00;
-  height: 55px;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-#platform #followHeader #postageBanner #desc {
-  padding-inline-start: 1rem;
-}
-#platform #followHeader #postageBanner #desc :nth-child(1) {
-  font-size: 13px;
-  font-weight: 400;
-}
-#platform #followHeader #postageBanner #desc :nth-child(2) {
-  font-size: 24px;
-  line-height: 14px;
-  font-weight: 800;
-}
-#platform #followHeader #postageBanner #desc :nth-child(2) span {
-  font-size: 20px;
-  font-weight: 800;
-}
-#platform #followHeader #menubar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 40px;
-  background-color: white;
-  font-weight: 600;
 }
 #platform #pkgIllust {
   width: 100%;
@@ -1018,40 +1067,45 @@ html .headdingRuby {
 #platform #info table :last-child td {
   border-bottom: none;
 }
-#platform #followFooter {
+
+#followFooter {
+  width: 100%;
+  max-width: 768px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-inline: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
   background-color: white;
-  width: 100%;
-  bottom: 0;
   border-top: 2px #ececec solid;
   padding: 1rem;
 }
-#platform #followFooter #desc {
+#followFooter #desc {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-#platform #followFooter #desc #cartType {
+#followFooter #desc #cartType {
   color: #777777;
   font-size: 12px;
   line-height: 8px;
 }
-#platform #followFooter #desc #amount {
+#followFooter #desc #amount {
   display: flex;
 }
-#platform #followFooter #desc #amount p {
+#followFooter #desc #amount p {
   font-size: 12px;
   font-weight: 600;
   line-height: 1rem;
 }
-#platform #followFooter #desc #amount p #amountPrice {
+#followFooter #desc #amount p #amountPrice {
   font-size: 16px;
   line-height: 1rem;
 }
-#platform #followFooter .cartInS {
+#followFooter .cartInS {
   width: 150px;
   height: 35px;
   font-size: 12px;

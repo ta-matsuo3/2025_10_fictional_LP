@@ -42,7 +42,7 @@ const loadOldman = () => {
     なったつもりはないが周りが村長と呼んでくる。
     天界と何やら確執があるようだが・・・？`;
 
-    document.querySelector(".linesRight").textContent = "「別の村では昔、長老と呼ばれていました。40代なのに」";
+    document.querySelector(".linesRight").textContent = "「別の村では昔、長老と呼ばれていました。四十代なのに」";
     document.querySelector(".linesLeft").textContent = "「今は村長と呼ばれます。最近引っ越してきたのに」";
     document.querySelector("#charaImg").src = 'images/character/oldman.png'
 

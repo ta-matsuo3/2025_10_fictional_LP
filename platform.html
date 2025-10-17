@@ -21,7 +21,32 @@
     <script type="module" src="js/platform.js"></script>
 </head>
 
-<body>
+<body class="platformBody">
+    <header>
+        <div id="followHeader">
+            <div id="postageBanner">
+                <div id="desc">
+                    <p>ダウンロードソフトも合算対象になりました。</p>
+                    <p>6,000円<span>以上で</span>送料無料</p>
+                </div>
+                <img src="images/platform/postageIcon.png" alt="" class="logo">
+            </div>
+
+            <!-- このメニューバーはハリボテなので、全部まとめて1つの大きい戻るボタンとして機能させる -->
+            <a href="index.html">
+                <div id="menubarArea">
+                    <div id="menubar">
+                        <p class="item">トップ</p>
+                        <p class="item">ホーム</p>
+                        <p class="item">戻る</p>
+                        <p class="item">リターン</p>
+                        <p class="item">インデックス</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </header>
 
     <div id="platform">
         <div class="layer js-modal">
@@ -45,26 +70,7 @@
                 </div>
             </div>
         </div>
-        <header>
-            <div id="followHeader">
-                <div id="postageBanner">
-                    <div id="desc">
-                        <p>ダウンロードソフトも合算対象になりました</p>
-                        <p>6,000円<span>以上で</span>送料無料</p>
-                    </div>
-                    <img src="images/platform/postageIcon.png" alt="" class="logo">
-                </div>
-                <a href="index.html">
-                    <div id="menubar">
-                        <p class="item">トップ</p>
-                        <p class="item">ホーム</p>
-                        <p class="item">戻る</p>
-                        <p class="item">リターン</p>
-                        <p class="item">インデックス</p>
-                    </div>
-                </a>
-            </div>
-        </header>
+
         <main>
             <img src="images/platform/pkg.png" alt="" id="pkgIllust">
             <div id="mainInfo">
@@ -127,21 +133,22 @@
                     </tr>
                 </table>
             </div>
-            <div id="followFooter">
-                <div id="desc">
-                    <p id="cartType">種類：ダウンロード版</p>
-                    <div id="amount">
-                        <p>1点<span id="amountPrice"> 2,500 </span>円 税込</p>
-                    </div>
-                </div>
-                <button class="btn cartInS js-modal-button">カートに入れる</button>
-            </div>
+
         </main>
         <footer>
             <div id="copyright">
                 <small>&copy; 2025 matsuo takuma</small>
             </div>
         </footer>
+    </div>
+    <div id="followFooter">
+        <div id="desc">
+            <p id="cartType">種類：ダウンロード版</p>
+            <div id="amount">
+                <p>1点<span id="amountPrice"> 2,500 </span>円 税込</p>
+            </div>
+        </div>
+        <button class="btn cartInS js-modal-button">カートに入れる</button>
     </div>
 </body>
 

@@ -1,7 +1,90 @@
 @use '../base/variables' as *;
 
-// モーダル
+.platformBody {
+    background-color: #ffff;
+    font-family: $platformFont;
+}
 
+.btn {
+
+    background-color: $buttonColor ;
+    color: #ffff;
+    border-radius: 8px;
+}
+
+//送料無料バナー
+#followHeader {
+    width: 100%;
+    position: fixed;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #postageBanner {
+        font-family: $postageFont;
+        background-color: #FFCC00;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+
+        #desc {
+            padding-inline-start: 1rem;
+            white-space: nowrap;
+
+            :nth-child(1) {
+                font-size: 13px;
+                font-weight: 400;
+            }
+
+            :nth-child(2) {
+                font-size: 24px;
+                line-height: 14px;
+                font-weight: 800;
+
+                span {
+                    font-size: 20px;
+                    font-weight: 800;
+
+                }
+
+            }
+
+            @media(width>=768px) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+                :nth-child(1) {
+                    font-size: 18px;
+                }
+
+            }
+        }
+    }
+
+    // メニューバー
+    #menubarArea {
+
+        #menubar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            max-width: 768px;
+            height: 40px;
+            background-color: #ffff;
+            margin-inline: auto;
+
+            font-weight: 600;
+        }
+    }
+}
+
+// マスクとモーダル
 /* グレー背景 */
 .layer {
     background: rgba(0, 0, 0, .2);
@@ -31,8 +114,8 @@
 
 .modal__button-wrap {
     position: absolute;
-    right: 10px;
-    top: -28px;
+    right: -15px;
+    top: -20px;
     display: inline-flex;
 }
 
@@ -41,7 +124,7 @@
     position: relative;
     width: 39px;
     height: 39px;
-    background: orange;
+    background: #EDEDED;
     border-radius: 50%;
     padding: 0;
     border: transparent;
@@ -50,8 +133,8 @@
 
 .close-button span {
     width: 25px;
-    height: 2px;
-    background: #fff;
+    height: 4px;
+    background: black;
     display: inline-block;
     position: absolute;
     left: calc(50% - 12px);
@@ -119,10 +202,8 @@
     }
 
     :nth-child(4) {
-        color: ;
+        color: $fontGray;
     }
-
-
 }
 
 
@@ -134,77 +215,16 @@
     padding-top: 15px;
 }
 
+//プラットフォーム本体
+
 #platform {
-    font-family: $platformFont;
-    background-color: #ffff;
-
-    .btn {
-
-        background-color: $buttonColor ;
-        color: #ffff;
-        border-radius: 8px;
-    }
+    max-width: 768px;
+    margin-inline: auto;
 
     .cartInL {
         width: 270px;
         height: 50px;
         margin-inline: auto;
-    }
-
-    //送料無料バナー
-    #followHeader {
-        width: 100%;
-        position: fixed;
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-
-        #postageBanner {
-            font-family: $postageFont;
-            background-color: #FFCC00;
-            height: 55px;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-
-
-            #desc {
-                padding-inline-start: 1rem;
-
-
-                :nth-child(1) {
-                    font-size: 13px;
-                    font-weight: 400;
-                }
-
-                :nth-child(2) {
-                    font-size: 24px;
-                    line-height: 14px;
-                    font-weight: 800;
-
-                    span {
-                        font-size: 20px;
-                        font-weight: 800;
-
-                    }
-
-                }
-            }
-        }
-
-        // メニューバー
-        #menubar {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-
-            height: 40px;
-            background-color: #ffff;
-
-            font-weight: 600;
-        }
     }
 
     #pkgIllust {
@@ -339,49 +359,57 @@
         }
     }
 
-    #followFooter {
+
+}
+
+#followFooter {
+    width: 100%;
+    max-width: 768px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #ffff;
+    border-top: 2px $borderGray solid;
+    padding: 1rem;
+
+    #desc {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        background-color: #ffff;
-        width: 100%;
-        bottom: 0;
-        border-top: 2px $borderGray solid;
-        padding: 1rem;
+        flex-direction: column;
+        gap: 5px;
 
-        #desc {
+        #cartType {
+            color: $fontGray;
+            font-size: 12px;
+            line-height: 8px;
+        }
+
+        #amount {
             display: flex;
-            flex-direction: column;
-            gap: 5px;
 
-            #cartType {
-                color: $fontGray;
+            p {
                 font-size: 12px;
-                line-height: 8px;
-            }
+                font-weight: 600;
+                line-height: 1rem;
 
-            #amount {
-                display: flex;
-
-                p {
-                    font-size: 12px;
-                    font-weight: 600;
+                #amountPrice {
+                    font-size: 16px;
                     line-height: 1rem;
-
-                    #amountPrice {
-                        font-size: 16px;
-                        line-height: 1rem;
-                    }
                 }
             }
         }
+    }
 
-        .cartInS {
-            width: 150px;
-            height: 35px;
-            font-size: 12px;
-            font-weight: 600;
-        }
+    .cartInS {
+        width: 150px;
+        height: 35px;
+        font-size: 12px;
+        font-weight: 600;
     }
 }
