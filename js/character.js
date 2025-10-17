@@ -8,8 +8,8 @@ const loadEngel = () => {
     言葉を発することもできない。
     落下のショックで記憶もなく、上司の言いなり`;
 
-    document.querySelector(".linesRight").textContent = "「・・・。」";
-    document.querySelector(".linesLeft").textContent = "「（話が長いな・・・聞こえなかったフリしよ）」";
+    document.querySelector(".linesRight").textContent = "「 ・・・。」";
+    document.querySelector(".linesLeft").textContent = "「 （話が長いな・・・聞こえなかったフリしよ） 」";
     document.querySelector("#charaImg").src = 'images/character/engel.png'
 
     window.scroll({ top: 0, behavior: "smooth", });

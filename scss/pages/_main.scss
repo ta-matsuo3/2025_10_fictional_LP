@@ -123,9 +123,15 @@ html {
 #character {
     height: 700px;
     background-image: url(../images/character/background.jpg);
-    background-size: 600px;
+    background-size: 700px;
     background-position: bottom;
     padding-block: 36px;
+
+    @media(width>=711px) {
+        height: 550px;
+        background-size: cover;
+        background-position: center;
+    }
 
     .charaThumbnail {
         border: 1px black solid;
@@ -147,7 +153,6 @@ html {
             color: #ffff;
             background-color: black;
         }
-
     }
 
     #thumbnailWrap {
@@ -156,7 +161,6 @@ html {
         justify-content: center;
         margin-block: 64px;
         gap: 32px;
-
 
         :nth-child(1) {
             .imgBox {
@@ -196,25 +200,29 @@ html {
     }
 }
 
-
-
 //////////////// システム画面 /////////////////
 #system {
     height: 1750px;
     background-color: black;
     padding-block: 2rem;
 
-
-    .headding {
-        color: #ffff;
+    @media(width>=768px) {
+        height: 1200px;
     }
 
-    .headdingRuby {
-        color: #ffff;
+    .headdingWrap {
+        @media(width>=768px) {
+            margin-block-end: 5rem;
+        }
 
+        .headding {
+            color: #ffff;
+        }
+
+        .headdingRuby {
+            color: #ffff;
+        }
     }
-
-
 
     #systemUnity {
         display: flex;
@@ -222,16 +230,36 @@ html {
         gap: 6rem;
         margin-block-start: 1rem;
 
-
         .systemWrap {
             display: flex;
+            max-width: 768px;
             flex-direction: column;
             align-items: center;
             text-align: center;
+
+            margin-inline: auto;
             gap: 1rem;
 
-            .descWrap {
+            @media(width>=768px) {
+                border-bottom: #ececec 1px solid;
+                padding-block-end: 2rem;
+                flex-direction: row;
+                justify-content: center;
 
+
+
+                &.odd {
+                    .descWrap {
+                        order: 2;
+                    }
+
+                    .photoFlame {
+                        order: 1;
+                    }
+                }
+            }
+
+            .descWrap {
                 .systemTitle {
                     font-size: 2rem;
                     font-weight: 500;
@@ -257,6 +285,10 @@ html {
 
                 }
             }
+
+            &:last-child {
+                border-bottom: none;
+            }
         }
     }
 }
@@ -269,13 +301,26 @@ html {
     background-position: -575px;
     padding-block: 36px;
 
+    @media(width>=525px) {
+        background-position: bottom;
+    }
+
     #scroll {
+        max-width: 768px;
         display: flex;
         margin-block-start: 5rem;
-        gap: 8px;
+        justify-content: space-around;
+        gap: 1rem;
+        margin-inline: auto;
 
         img {
-            width: 170px;
+            max-width: 150px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px gray;
+
+            @media(width>=575px) {
+                max-width: 220px;
+            }
         }
     }
 }

@@ -9,20 +9,12 @@
 
     #charaVisual {
         margin-block-start: 60px;
-        max-width: 768px;
+        max-width: 390px;
         position: relative;
         margin-inline: auto;
 
         @media(width>=768px) {
             margin-block-start: 120px;
-        }
-
-        .linesLeft {
-            left: 2.5rem;
-        }
-
-        .linesRight {
-            right: 2.5rem;
         }
 
         .lines {
@@ -31,6 +23,15 @@
             font-size: 20px;
             font-weight: 600;
             top: 1rem;
+            background-color: #ffffff7f;
+        }
+
+        .linesLeft {
+            left: 10px;
+        }
+
+        .linesRight {
+            right: 10px;
         }
 
         img {
@@ -63,6 +64,7 @@
             #charaDesc {
                 width: 355px;
                 border: 1px black solid;
+                font-weight: 600;
             }
         }
     }

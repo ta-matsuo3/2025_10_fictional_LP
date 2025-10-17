@@ -511,7 +511,7 @@ footer #copyright small {
 }
 #charaWrap #charaVisual {
   margin-block-start: 60px;
-  max-width: 768px;
+  max-width: 390px;
   position: relative;
   margin-inline: auto;
 }
@@ -520,18 +520,19 @@ footer #copyright small {
     margin-block-start: 120px;
   }
 }
-#charaWrap #charaVisual .linesLeft {
-  left: 2.5rem;
-}
-#charaWrap #charaVisual .linesRight {
-  right: 2.5rem;
-}
 #charaWrap #charaVisual .lines {
   position: absolute;
   writing-mode: vertical-rl;
   font-size: 20px;
   font-weight: 600;
   top: 1rem;
+  background-color: rgba(255, 255, 255, 0.4980392157);
+}
+#charaWrap #charaVisual .linesLeft {
+  left: 10px;
+}
+#charaWrap #charaVisual .linesRight {
+  right: 10px;
 }
 #charaWrap #charaVisual img {
   min-width: 390px;
@@ -559,6 +560,7 @@ footer #copyright small {
 #charaWrap #charaTextWrapArea #charaTextWrap #charaDesc {
   width: 355px;
   border: 1px black solid;
+  font-weight: 600;
 }
 
 #charaThumbnails {
@@ -668,9 +670,16 @@ html .headdingRuby {
 #character {
   height: 700px;
   background-image: url(../images/character/background.jpg);
-  background-size: 600px;
+  background-size: 700px;
   background-position: bottom;
   padding-block: 36px;
+}
+@media (width >= 711px) {
+  #character {
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+  }
 }
 #character .charaThumbnail {
   border: 1px black solid;
@@ -724,10 +733,20 @@ html .headdingRuby {
   background-color: black;
   padding-block: 2rem;
 }
-#system .headding {
+@media (width >= 768px) {
+  #system {
+    height: 1200px;
+  }
+}
+@media (width >= 768px) {
+  #system .headdingWrap {
+    margin-block-end: 5rem;
+  }
+}
+#system .headdingWrap .headding {
   color: white;
 }
-#system .headdingRuby {
+#system .headdingWrap .headdingRuby {
   color: white;
 }
 #system #systemUnity {
@@ -738,10 +757,26 @@ html .headdingRuby {
 }
 #system #systemUnity .systemWrap {
   display: flex;
+  max-width: 768px;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-inline: auto;
   gap: 1rem;
+}
+@media (width >= 768px) {
+  #system #systemUnity .systemWrap {
+    border-bottom: #ececec 1px solid;
+    padding-block-end: 2rem;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #system #systemUnity .systemWrap.odd .descWrap {
+    order: 2;
+  }
+  #system #systemUnity .systemWrap.odd .photoFlame {
+    order: 1;
+  }
 }
 #system #systemUnity .systemWrap .descWrap .systemTitle {
   font-size: 2rem;
@@ -764,6 +799,9 @@ html .headdingRuby {
   -o-object-fit: cover;
      object-fit: cover;
 }
+#system #systemUnity .systemWrap:last-child {
+  border-bottom: none;
+}
 
 #gallery {
   height: 610px;
@@ -772,13 +810,28 @@ html .headdingRuby {
   background-position: -575px;
   padding-block: 36px;
 }
+@media (width >= 525px) {
+  #gallery {
+    background-position: bottom;
+  }
+}
 #gallery #scroll {
+  max-width: 768px;
   display: flex;
   margin-block-start: 5rem;
-  gap: 8px;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-inline: auto;
 }
 #gallery #scroll img {
-  width: 170px;
+  max-width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px gray;
+}
+@media (width >= 575px) {
+  #gallery #scroll img {
+    max-width: 220px;
+  }
 }
 
 .platformBody {
