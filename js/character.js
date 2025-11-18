@@ -4,9 +4,9 @@ const loadEngel = () => {
 
     document.querySelector("#charaDesc").innerText =
         `下界に落とされた天使（？）
+        落下のショックで記憶がなく、
     天使が使える機能のほとんどが停止しており
-    言葉を発することもできない。
-    落下のショックで記憶もなく、上司の言いなり`;
+    言葉を発することもできない。`;
 
     document.querySelector(".linesRight").textContent = "「 ・・・。」";
     document.querySelector(".linesLeft").textContent = "「 （話が長いな・・・聞こえなかったフリしよ） 」";

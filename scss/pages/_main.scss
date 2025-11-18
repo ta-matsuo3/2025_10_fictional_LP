@@ -38,6 +38,24 @@ html {
 
 }
 
+#particleArea {
+    position: relative;
+
+}
+
+
+#myCanvas {
+    pointer-events: none;
+    // width: 100%;
+    // height: 100%;
+
+    position: absolute;
+    z-index: 1;
+    // object-fit: cover;
+    // background-color: #00000018;
+}
+
+
 //////////////////ファーストビュー/////////////////
 
 #firstView {
@@ -161,6 +179,11 @@ html {
         justify-content: center;
         margin-block: 64px;
         gap: 32px;
+
+        a {
+            text-decoration: none;
+
+        }
 
         :nth-child(1) {
             .imgBox {

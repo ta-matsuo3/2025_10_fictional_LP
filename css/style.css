@@ -328,7 +328,7 @@ progress {
   align-items: center;
   position: fixed;
   flex-direction: column;
-  z-index: 1;
+  z-index: 10;
   opacity: 1;
   right: -100%;
   transition: 0.3s all ease-out;
@@ -622,6 +622,16 @@ html .headdingRuby {
   line-height: 8px;
 }
 
+#particleArea {
+  position: relative;
+}
+
+#myCanvas {
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
 #firstView {
   width: 100%;
   aspect-ratio: 9/16;
@@ -706,6 +716,9 @@ html .headdingRuby {
   justify-content: center;
   margin-block: 64px;
   gap: 32px;
+}
+#character #thumbnailWrap a {
+  text-decoration: none;
 }
 #character #thumbnailWrap :nth-child(1) .imgBox img {
   height: 200%;
